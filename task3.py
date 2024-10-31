@@ -6,3 +6,15 @@
 # 2/3
 # Вывод:
 # 7/6  (будет еще круче если упростите до 1+1/6)
+
+fraction1 = input("Введите дробь1 вида a/b: ")
+fraction2 = input("Введите дробь2 вида a/b: ")
+
+v1, n1 = map(int, fraction1.split("/"))
+v2, n2 = map(int, fraction2.split("/"))
+
+numerator = v1 * n2 + v2 * n1
+denominator = n1 * n2
+print(numerator, denominator, sep="/")
+
+# На выделение целой части от дробной не хватило сил и мозгов
