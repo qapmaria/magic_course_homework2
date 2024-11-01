@@ -3,3 +3,14 @@
 # а значение - список элементов данного типа.
 # Для списка: [1, 2, "3", "4", True, 5.5]
 # Ответ:  {int: [1, 2, 5], float: [5.5], str: ["3", "4"], bool: [True]}
+
+
+list1 = [1, 2, "3", "4", True, 5.5]
+s = {}
+
+for i in list1:
+    if type(i) not in s:
+        s[type(i)] = []
+    s[type(i)].append(i)
+    
+print(s)
